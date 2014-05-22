@@ -14,5 +14,6 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
   $routeProvider.when('/sectors', {templateUrl: 'partials/sectors.html', controller: 'SectorsCtrl'});
   $routeProvider.when('/industry/:industryId', {templateUrl: 'partials/industry.html', controller: 'IndustryCtrl'});
+  $routeProvider.when('/company/:symbol', {templateUrl: 'partials/company.html', controller: 'CompanyCtrl'});
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);

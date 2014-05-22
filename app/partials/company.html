@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{company.symbol}}</h1>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Stats</th>
+                <th>Value</th>
+                <th>Term</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="(key, val) in company">
+                <td ng-if="val.content">{{key}}</td>
+                <td ng-if="val.content" ng-class="{danger: val.content < 0, success: val.content > 0}">{{val.content}}</td>
+                <td ng-if="val.term">{{val.term}}</td>
+              </tr> 
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

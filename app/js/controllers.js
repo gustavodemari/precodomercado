@@ -18,7 +18,6 @@ var app = angular.module('precodomercado.controllers', []);
 
     $http.get(YAHOO_API_URL)
     .success(function(data){
-      console.log(data);
       if(data.query.results){
         $scope.sectors = data.query.results.sector;
       }
@@ -33,9 +32,23 @@ var app = angular.module('precodomercado.controllers', []);
 
     $http.get(YAHOO_API_URL)
     .success(function(data){
-      console.log(data);
       if(data.query.results){
         $scope.industry = data.query.results.industry;
+      }
+    });
+
+  }]);
+
+  app.controller('CompanyCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
+    $scope.company = [];
+
+    var YAHOO_API_URL = 'https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20yahoo.finance.keystats%20WHERE%20symbol%3D\''+$routeParams.symbol+'\'&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
+
+    $http.get(YAHOO_API_URL)
+    .success(function(data){
+      console.log(data);
+      if(data.query.results){
+        $scope.company = data.query.results.stats;
       }
     });
 
