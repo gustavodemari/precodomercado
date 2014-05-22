@@ -1,0 +1,16 @@
+{
+  "name": "precodomercado",
+  "description": "A project to show market data",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gustavodemari/precodomercado",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "angular-loader": "1.2.x",
+    "angular-mocks": "~1.2.x",
+    "html5-boilerplate": "~4.3.0",
+    "bootstrap": "3.1.x"
+  }
+}
