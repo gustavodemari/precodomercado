@@ -12,17 +12,7 @@ var app = angular.module('precodomercado.controllers', []);
   }]);
 
   app.controller('SectorsCtrl', ['$scope', '$http', function($scope, $http) {
-    $scope.sectors = [
-      {
-        name: 'Sector1'
-      },
-      {
-        name: 'Sector2'
-      },
-      {
-        name: 'Sector3'
-      }
-    ];
+    $scope.sectors = [];
 
     var YAHOO_API_URL = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.sectors&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
 
@@ -30,7 +20,7 @@ var app = angular.module('precodomercado.controllers', []);
     .success(function(data){
       console.log(data);
       if(data.query.results){
-        //$scope.sectors = data.query.results.sector;
+        $scope.sectors = data.query.results.sector;
       }
     });
 
