@@ -1,7 +1,6 @@
 var express = require('express');
-var fs = require('fs');
 var app = express();
-app.use(express.logger());
+
 app.use(express.static(__dirname + '/app'));
 
 var port = process.env.PORT || 5000;
