@@ -5,6 +5,9 @@
   "description": "A project to show market data",
   "repository": "https://github.com/gustavodemari/precodomercado",
   "license": "MIT",
+  "dependencies": {
+    "express": "4.x"
+  }
   "devDependencies": {
     "karma": "~0.10",
     "protractor": "~0.20.1",
