@@ -18,7 +18,6 @@ var app = angular.module('precodomercado.controllers', []);
 
     $http.get(YAHOO_API_URL)
     .success(function(data){
-      console.log(data);
       if(data.query.results){
         $scope.sectors = data.query.results.sector;
       }
@@ -47,7 +46,6 @@ var app = angular.module('precodomercado.controllers', []);
 
     $http.get(YAHOO_API_URL)
     .success(function(data){
-      console.log(data);
       if(data.query.results){
         $scope.company = data.query.results.stats;
       }
