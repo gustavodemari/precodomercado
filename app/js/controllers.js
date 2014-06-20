@@ -15,14 +15,13 @@ var app = angular.module('precodomercado.controllers', []);
     $scope.sectors = [];
     
     var YAHOO_API_URL = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.sectors&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
-    
-    if($scope.sectors.length === 0) {
-      $http.get(YAHOO_API_URL, {cache: true})
-        .success(function(data){
-          if(data.query.results){
-            $scope.sectors = data.query.results.sector;
-          }
-        });
+
+    $http.get(YAHOO_API_URL, {cache: true})
+      .success(function(data){
+        if(data.query.results){
+          $scope.sectors = data.query.results.sector;
+        }
+      });
     }
   }]);
 
