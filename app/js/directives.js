@@ -1,7 +1,6 @@
-'use strict';
-
 /* Directives */
 
+'use strict';
 
 angular.module('precodomercado.directives', []).
   directive('appVersion', ['version', function(version) {

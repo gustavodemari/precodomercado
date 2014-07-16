@@ -1,6 +1,6 @@
-'use strict';
-
 /* Services */
+
+'use strict';
 
 
 // Demonstrate how to register services

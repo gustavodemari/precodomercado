@@ -1,8 +1,9 @@
+/* Controllers */
+
 'use strict';
 
 var YAHOO_API_URI = 'https://query.yahooapis.com/v1/public/yql';
 
-/* Controllers */
 var app = angular.module('precodomercado.controllers', []);
 
   app.controller('MyCtrl1', ['$scope', function($scope) {

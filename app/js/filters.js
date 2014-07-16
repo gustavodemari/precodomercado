@@ -1,6 +1,6 @@
-'use strict';
-
 /* Filters */
+
+'use strict';
 
 angular.module('precodomercado.filters', []).
   filter('interpolate', ['version', function(version) {
